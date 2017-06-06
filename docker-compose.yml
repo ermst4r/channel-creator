@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+    db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: local
+       MYSQL_DATABASE: local
+       MYSQL_USER: local
+       MYSQL_PASSWORD: local
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      environment:
+       - PMA_ARBITRARY=1
+      restart: always
+      ports:
+       - 8080:80
+      volumes:
+       - /sessions
+    web:
+      build: phpcustom
+      ports:
+       - 80:80
+      volumes:
+       - ./phpcustom/src:/var/www/html
+      depends_on:
+       - "db"
+volumes:
+    db_data:

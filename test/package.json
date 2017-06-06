@@ -1,0 +1,20 @@
+{
+  "name" : "erm-json-testing",
+  "description" : "Contains all channel and country tests",
+  "homepage" : "stolpsys.nl",
+  "version" : "0.9.0",
+  "author" : {
+    "name" : "Jeroen Stolp",
+    "email" : "jeroen@stolpsys.com",
+    "url" : "stolpsys.com"
+  },
+  "contributors" : [],
+  "main" : "erm-json-testing",
+  "dependencies" : {
+    "jasmine-node" : "1.14.*",
+    "frisby": "0.8.*",
+    "chance": "1.0.*",
+    "node-forge": "0.7.*",
+    "dateformat": "2.0.*"
+  }
+}
