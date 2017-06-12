@@ -115,7 +115,7 @@ frisby.create('Ensure target response from github.')
 
     )
     .afterJSON(function(j) {
-        console.log(JSON.stringify(j, 't', 4));
+//        console.log(JSON.stringify(j, 't', 4));
     })
     .toss();
 
@@ -239,6 +239,6 @@ frisby.create('Ensure Jeroen Has right response from github.')
 
     )
     .afterJSON(function(j) {
-        console.log(JSON.stringify(j, 't', 4));
+//        console.log(JSON.stringify(j, 't', 4));
     })
     .toss();
